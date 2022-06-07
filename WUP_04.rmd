@@ -42,11 +42,17 @@ basicCN <- ggplot(GSScsv,aes(x=DEGREE,y=WORDSUM))
 basicCN + geom_boxplot()
 ```
 
-The graph shows the different grades of wordsum between the different grade levels
+The graph shows the different grades of wordsum between the different grade levels. The LT box is much lower than the junior college and the graduate degrees
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+favstats(WORDSUM~DEGREE,data=GSScsv)
+```
+
+This graph is showing that the graduate students has a higher mean of around 2.25 of the LT high school. The Q1 of the graduate students is bigger than the Q3 for the Lt High school. 
 
 ## Inferential Results
 
